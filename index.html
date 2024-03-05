@@ -19,7 +19,7 @@
                     <a class="navbar-brand">Tasty HUT</a>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <button  class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                 </div>
             </nav>
@@ -38,64 +38,50 @@
                     <!-- <input type="text" placeholder="Search" class="w-50 p-2 rounded">
                   <button type="button" class="btn btn-warning">Search</button> -->
                     <div class="input-group mb-3 w-50 mx-auto">
-                        <input type="text" class="form-control" placeholder="search products"
-                            aria-label="Recipient's username" aria-describedby="button-addon2">
-                        <button class="btn btn-warning" type="button" id="button-addon2">Search</button>
-                    </div>
+                        <input id="search-field" type="text" class="form-control" placeholder="search products"
+                            aria-label="search" aria-describedby="button-addon2">
+                        <button onclick="searchMeals()" class="btn btn-warning" type="button" id="button-addon2  ">Search</button>
+                    </div> 
+                    
+                  
                 </div>
             </div>
         </section>
     </header>
 
     <main>
+        <!-- card section -->
         <section class="container">
-            <h1 class="text-center m-4  fs-1">Your favorite Food</h1>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                <div class="col">
-                    <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
+            <div id="meals-container" class="row row-cols-1 row-cols-md-3 g-4">
+                
+            </div>
+    
+    
+        </section>
+
+        <section>
+            <!-- Modal -->
+    <div class="modal fade" id="mealModal" tabindex="-1" aria-labelledby="mealModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="mealModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
+                <div id="mealDetailsBody" class="modal-body">
+                    
                 </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    
                 </div>
             </div>
+        </div>
+    </div>
 
         </section>
     </main>
-    <footer class="bg-danger-subtle
+    <footer class="bg-primary-subtle
     mt-4">
         <div class="container pt-4 pb-4">
             <div class="row row-cols-2 row-cols-md-4">
@@ -145,6 +131,7 @@
         </div>
     </footer>
 
+   
 
     <!-- javascript link -->
     <script src="js/script.js"></script>
